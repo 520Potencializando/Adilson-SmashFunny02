@@ -1,0 +1,148 @@
+@font-face {
+    font-family: 'app';
+    src: url("../fonts/Appetite.ttf");
+} 
+   /* animation:light 2s ease-in-out infinite; */
+body{margin:0;}
+.link, .p{text-decoration:none;font-family:app;text-align:center;margin:10px;}
+.p{font-size:3em;color:#0e8f00;margin:0;}
+.link p{color:#ffc!important;font-size:25px;}
+.link{
+    
+    border-radius:50px;
+    border:5px solid #ffc;
+    background: linear-gradient(180deg, rgba(193,28,30,1) 0%, rgba(189,103,16,1) 100%);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width: 300px;
+    margin: 10px auto;
+
+    box-shadow:#203 2px 2px 4px,#203 4px 4px 8px,#203 1px 1px 3px;;
+}
+.link:hover{
+    background: linear-gradient(180deg, rgba(255,146,95,1) 0%, rgba(205,46,24,1) 100%);
+}
+.textshadow{
+    text-shadow: #ffc 2px 2px 0px, #ffc -2px 2px 0px, #ffc 2px -2px 0px, #ffc -2px -2px 0px, 
+                 #ffc 2.7px 0px 0px, #ffc -2.7px 0px 0px, #ffc 0px -2.7px 0px, #ffc 0px 2.7px 0px, 
+                 #ffc 1px 2.3px 0px, #ffc -1px 2.3px 0px, #ffc 1px -2.3px 0px, #ffc -1px -2.3px 0px, #ffc 2.3px 1px 0px, #ffc -2.3px 1px 0px, #ffc 2.3px -1px 0px, #ffc -2.3px -1px 0px,
+                 #203 2px 2px 4px,#203 4px 4px 8px,#203 1px 1px 3px;}
+.logo{
+    position:absolute;
+    top:-20px;
+    height:15vh;
+    z-index: 100;
+}
+.container{
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    overflow:hidden;
+    background-image:url(../img/nicebg.png);
+    background-size:cover;
+    background-position:center;
+}
+.video_cnt{
+    transform: scale(0.8);
+    width:792px;
+    height:412px;
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+.frame{
+    position:absolute;
+    width:792px;
+    height:412px;
+    top:0;
+    left:0;
+    background-image:url(../img/frame.png);
+    background-size:cover;
+    background-position:center;
+}
+#video{
+    width:652px;
+    height:412px;
+}
+.glogo{
+    z-index:100;
+    margin-top:-90px;
+    position: relative;
+    width: 300px;
+    height: 140px;
+}
+.glogo::before {
+    position: absolute;
+    content: '';
+    width: 300px;
+    height: 153px;
+    background-image: url(../img/glogo.png);
+    background-repeat: no-repeat;
+    background-position: 0px -44px;
+}
+.tx_block{
+    z-index:100;
+    margin-top:-80px;
+}
+.float{
+    z-index:1;
+    position:absolute;
+    animation:float 1.5s ease-in-out infinite alternate;
+}
+.item1{
+    left:10vw;
+}
+.item2{
+    right:10vw;
+    animation-delay:-0.75s;
+}
+@keyframes float{
+    from{
+        bottom:15vh;
+    }
+    to{
+        bottom:18vh;
+    }
+}
+@media screen and (max-width:768px){
+    .video_cnt{
+        transform:scale(0.5);
+        margin-top: -20vh;
+    }
+    .glogo{
+        margin-top: -220px;
+        width: 250px;
+        height: 50px;
+		margin-bottom: 3vh;
+    }
+    .glogo::before {
+        width: 250px;
+        /*height: 50px;
+        background-position: 0px 6px;*/
+		background-size: contain;
+    }
+    .p{font-size:25px;margin:-2px auto;}
+    .item1{
+        left:2vw;
+		max-width: 40vw;
+		max-height: 40vh;
+    }
+    .item2{
+        right:2vw;
+		max-width: 40vw;
+		max-height: 40vh;
+    }
+}
+
+.footer a{
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 14px;
+}
